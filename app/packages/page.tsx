@@ -23,9 +23,9 @@ const IMAGES = {
 const COMPARISON = [
   { feature: "Guide", shared: "Professional guide", private: "Personal dedicated guide" },
   { feature: "Boat", shared: "Shared with group", private: "Private boat for you" },
-  { feature: "Group Size", shared: "6–10 people", private: "1–6 people" },
+  { feature: "Group Size", shared: "6–10 people", private: "1–4 people" },
   { feature: "Duration", shared: "~2 hours", private: "~2.5 hours (flexible)" },
-  { feature: "Schedule", shared: "Fixed departure 9 AM", private: "Choose your time" },
+  { feature: "Schedule", shared: "Fixed departure 8.30 AM", private: "Choose your time" },
   { feature: "Locations", shared: "3 snorkeling spots", private: "3 spots + hidden gems" },
   { feature: "Snorkeling Gear", shared: "✓ Included", private: "✓ Premium gear" },
   { feature: "Photos", shared: "Group photos", private: "Gopro Usage" },
@@ -317,7 +317,7 @@ export default function PackagesPage() {
                     ⏱ ~2.5 hours (flexible)
                   </span>
                   <span className="px-3 py-1 bg-white/5 rounded-full text-white/50 text-xs">
-                    👥 1–6 people
+                    👥 1–4 people
                   </span>
                   <span className="px-3 py-1 bg-white/5 rounded-full text-white/50 text-xs">
                     🏊 All levels
@@ -445,8 +445,8 @@ export default function PackagesPage() {
                   A <strong className="text-white/70">sheltered, calm bay</strong>{" "}
                   with shallower water (5–10m). Mantas come here to feed, so they
                   swim slowly and closely. Perfect for{" "}
-                  <strong className="text-white/70">beginners</strong> and close
-                  encounters. Higher chance of sightings year-round.
+                  <strong className="text-white/70">beginners</strong>. Note that there is around a{" "}
+                  <strong className="text-coral">50% chance</strong> of seeing mantas here.
                 </p>
               </div>
               <div className="text-center">
@@ -463,8 +463,9 @@ export default function PackagesPage() {
                   </strong>{" "}
                   (10–25m depth). Known for{" "}
                   <strong className="text-white/70">larger oceanic mantas</strong>{" "}
-                  cruising through. Stronger currents make it more adventurous.
-                  Best for experienced snorkelers seeking thrills.
+                  cruising through. You have an excellent{" "}
+                  <strong className="text-turquoise">85-90% chance</strong> of seeing mantas here.
+                  Stronger currents make it more adventurous, best for experienced snorkelers.
                 </p>
               </div>
             </div>
