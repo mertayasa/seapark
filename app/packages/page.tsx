@@ -50,6 +50,7 @@ const SHARED_INCLUDES = [
   "Professional snorkeling guide",
   "Snorkeling mask, snorkel & fins",
   "Life jacket",
+  "Bottled water",
 ]
 
 const PRIVATE_INCLUDES = [
@@ -59,6 +60,7 @@ const PRIVATE_INCLUDES = [
   "Life jacket",
   "Underwater camera (GoPro) usage",
   "Flexible schedule & extended time",
+  "Bottled water & light snacks",
 ]
 
 const LOCATIONS = [
