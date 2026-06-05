@@ -1,6 +1,6 @@
 "use client"
 
-const WHATSAPP_NUMBER = "6281234567890"
+const WHATSAPP_NUMBER = "6281246587135"
 
 export default function WhatsAppFloat() {
   return (

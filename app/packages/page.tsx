@@ -9,31 +9,31 @@ export const metadata: Metadata = {
 }
 
 const IMAGES = {
-  hero: "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=1920&q=80",
+  hero: "manta-point-seapark.webp",
   mantaBay:
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&q=80",
+    "manta-bay-seapark.webp",
   mantaPoint:
-    "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=800&q=80",
+    "manta-point-seapark.webp",
   gamatBay:
-    "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=800&q=80",
+    "gamat-bay-seapark.webp",
   crystalBay:
-    "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80",
+    "crystal-bay-seapark.webp",
 }
 
 const COMPARISON = [
   { feature: "Guide", shared: "Professional guide", private: "Personal dedicated guide" },
   { feature: "Boat", shared: "Shared with group", private: "Private boat for you" },
-  { feature: "Group Size", shared: "8–12 people", private: "1–6 people" },
-  { feature: "Duration", shared: "~4 hours", private: "~5 hours (flexible)" },
+  { feature: "Group Size", shared: "6–10 people", private: "1–6 people" },
+  { feature: "Duration", shared: "~2 hours", private: "~2.5 hours (flexible)" },
   { feature: "Schedule", shared: "Fixed departure 9 AM", private: "Choose your time" },
-  { feature: "Locations", shared: "4 snorkeling spots", private: "4 spots + hidden gems" },
+  { feature: "Locations", shared: "3 snorkeling spots", private: "3 spots + hidden gems" },
   { feature: "Snorkeling Gear", shared: "✓ Included", private: "✓ Premium gear" },
-  { feature: "Photos", shared: "Group photos", private: "Personal photographer" },
+  { feature: "Photos", shared: "Group photos", private: "Gopro Usage" },
   { feature: "Price", shared: "IDR 350,000 / person", private: "IDR 1,800,000 / boat" },
 ]
 
 const ITINERARY = [
-  "Pick-up from your accommodation",
+  "Meet at Yellow Bridge",
   "Boat transfer to Manta Bay",
   "Snorkeling at Manta Bay (45 min)",
   "Transfer to Manta Point",
@@ -46,14 +46,10 @@ const ITINERARY = [
 ]
 
 const SHARED_INCLUDES = [
-  "Hotel pick-up & drop-off (Lembongan area)",
   "Boat & fuel",
   "Professional snorkeling guide",
   "Snorkeling mask, snorkel & fins",
   "Life jacket",
-  "Fresh towel",
-  "Bottled water & light snack",
-  "Waterproof bag for belongings",
 ]
 
 const PRIVATE_INCLUDES = [
@@ -61,11 +57,8 @@ const PRIVATE_INCLUDES = [
   "Personal dedicated guide",
   "Premium snorkeling gear",
   "Life jacket",
-  "Fresh towels for all guests",
-  "Cooler with drinks & tropical fruit",
   "Underwater camera (GoPro) usage",
   "Flexible schedule & extended time",
-  "Waterproof bag for belongings",
 ]
 
 const LOCATIONS = [
@@ -163,11 +156,10 @@ export default function PackagesPage() {
                 {COMPARISON.map((row, i) => (
                   <tr
                     key={row.feature}
-                    className={`border-b border-white/5 ${
-                      i === COMPARISON.length - 1
-                        ? "bg-white/[0.03]"
-                        : "hover:bg-white/[0.02]"
-                    } transition-colors`}
+                    className={`border-b border-white/5 ${i === COMPARISON.length - 1
+                      ? "bg-white/[0.03]"
+                      : "hover:bg-white/[0.02]"
+                      } transition-colors`}
                   >
                     <td className="p-5 text-white/70 font-medium text-sm">
                       {row.feature}
@@ -219,7 +211,7 @@ export default function PackagesPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="relative min-h-[300px] lg:min-h-full">
                 <Image
-                  src={IMAGES.mantaBay}
+                  src={IMAGES.crystalBay}
                   alt="Shared snorkeling tour group"
                   fill
                   className="object-cover"
@@ -306,7 +298,7 @@ export default function PackagesPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="relative min-h-[300px] lg:min-h-full order-1 lg:order-2">
                 <Image
-                  src={IMAGES.crystalBay}
+                  src={IMAGES.mantaPoint}
                   alt="Private snorkeling tour"
                   fill
                   className="object-cover"

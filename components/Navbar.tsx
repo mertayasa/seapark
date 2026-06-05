@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 
-const WHATSAPP_NUMBER = "6281234567890"
+const WHATSAPP_NUMBER = "6281246587135"
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -38,8 +39,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-turquoise to-deep-ocean flex items-center justify-center text-white font-bold text-lg transition-transform group-hover:scale-110">
-            🌊
+          <div className="relative w-11 h-11 rounded-full overflow-hidden transition-transform group-hover:scale-110 bg-white">
+            <Image src="/logo-black.webp" alt="Sea Park Activities Logo" fill className="object-contain p-1.5" sizes="44px" />
           </div>
           <div>
             <span className="text-white font-bold text-lg tracking-tight">

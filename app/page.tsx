@@ -1,27 +1,18 @@
 import Image from "next/image"
 import Link from "next/link"
+import Script from "next/script"
 import WhatsAppButton from "@/components/WhatsAppButton"
+import fs from "fs/promises"
+import path from "path"
 
 /* ─── Placeholder image URLs (Unsplash) ─── */
 const IMAGES = {
-  hero: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80",
+  hero: "manta-bay-seapark.webp",
   shared:
-    "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=800&q=80",
+    "gamat-bay-seapark.webp",
   private:
-    "https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800&q=80",
-  gallery1:
-    "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=600&q=80",
-  gallery2:
-    "https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=600&q=80",
-  gallery3:
-    "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&q=80",
-  gallery4:
-    "https://images.unsplash.com/photo-1571752726703-5e7d1f6a986d?w=600&q=80",
-  gallery5:
-    "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&q=80",
-  gallery6:
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
-  cta: "https://images.unsplash.com/photo-1468413253725-0d5181091126?w=1920&q=80",
+    "crystal-bay-seapark.webp",
+  cta: "manta-point-seapark.webp",
 }
 
 const WHY_CHOOSE = [
@@ -47,34 +38,18 @@ const WHY_CHOOSE = [
   },
 ]
 
-const TESTIMONIALS = [
-  {
-    name: "Sarah & James",
-    location: "Australia",
-    text: "Absolutely incredible experience! We saw 5 manta rays up close. The guides were professional and made us feel completely safe.",
-    rating: 5,
-  },
-  {
-    name: "Marco",
-    location: "Italy",
-    text: "The private tour was worth every penny. Crystal Bay was breathtaking, and having the boat to ourselves made it so special.",
-    rating: 5,
-  },
-  {
-    name: "Yuki & Ken",
-    location: "Japan",
-    text: "Best snorkeling we've ever done! The coral reefs at Gamat Bay are unreal. Highly recommend the shared tour for solo travelers.",
-    rating: 5,
-  },
-  {
-    name: "Emma",
-    location: "United Kingdom",
-    text: "Sea Park Activities made our honeymoon unforgettable. Swimming with mantas is a once-in-a-lifetime experience!",
-    rating: 5,
-  },
-]
+export default async function HomePage() {
+  const galleryDir = path.join(process.cwd(), "public", "gallery")
+  let galleryImages: string[] = []
+  try {
+    const galleryFiles = await fs.readdir(galleryDir)
+    galleryImages = galleryFiles
+      .filter((file) => /\.(webp|jpg|jpeg|png)$/i.test(file))
+      .map((file) => `/gallery/${file}`)
+  } catch (err) {
+    console.error("Failed to load gallery images:", err)
+  }
 
-export default function HomePage() {
   return (
     <>
       {/* ═══ HERO ═══ */}
@@ -314,33 +289,9 @@ export default function HomePage() {
               What Our Guests Say
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {TESTIMONIALS.map((t) => (
-              <div
-                key={t.name}
-                className="glass rounded-2xl p-6 hover:border-turquoise/20 transition-all duration-500 hover:-translate-y-1"
-              >
-                <div className="flex gap-0.5 mb-4">
-                  {[...Array(t.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-sm">
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <p className="text-white/60 text-sm leading-relaxed mb-6 italic">
-                  &quot;{t.text}&quot;
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-turquoise/20 to-deep-ocean/30 flex items-center justify-center text-turquoise font-bold text-sm">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="text-white font-medium text-sm">{t.name}</p>
-                    <p className="text-white/40 text-xs">{t.location}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="w-full flex justify-center">
+            <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
+            <div className="elfsight-app-6b377ae9-9136-415d-8691-5d8de5d26e09 w-full" data-elfsight-app-lazy></div>
           </div>
         </div>
       </section>
@@ -357,19 +308,10 @@ export default function HomePage() {
             </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
-            {[
-              IMAGES.gallery1,
-              IMAGES.gallery2,
-              IMAGES.gallery3,
-              IMAGES.gallery4,
-              IMAGES.gallery5,
-              IMAGES.gallery6,
-            ].map((src, i) => (
+            {galleryImages.map((src, i) => (
               <div
                 key={i}
-                className={`relative overflow-hidden rounded-2xl group cursor-pointer ${
-                  i === 0 || i === 5 ? "md:row-span-2 aspect-[3/4]" : "aspect-square"
-                }`}
+                className="relative overflow-hidden rounded-2xl group cursor-pointer aspect-square"
               >
                 <Image
                   src={src}

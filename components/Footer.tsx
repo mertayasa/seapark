@@ -1,6 +1,7 @@
 import Link from "next/link"
+import Image from "next/image"
 
-const WHATSAPP_NUMBER = "6281234567890"
+const WHATSAPP_NUMBER = "6281246587135"
 
 export default function Footer() {
   return (
@@ -10,8 +11,8 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-turquoise to-deep-ocean flex items-center justify-center text-white text-base">
-                🌊
+              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-white">
+                <Image src="/logo-black.webp" alt="Sea Park Activities Logo" fill className="object-contain p-1.5" sizes="40px" />
               </div>
               <div>
                 <span className="text-white font-bold text-base">
@@ -60,11 +61,18 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-white/50">
               <li className="flex items-start gap-2">
                 <span className="mt-0.5">📍</span>
-                <span>Nusa Lembongan, Bali, Indonesia</span>
+                <a
+                  href="https://maps.app.goo.gl/RgV7jXPA68Munmgk7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-turquoise transition-colors text-left"
+                >
+                  Br. anggrek dusun ceningan kawan, Lembongan, Kec. Nusa Penida, Kabupaten Klungkung, Bali 80771
+                </a>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-0.5">📧</span>
-                <span>hello@seaparkactivities.com</span>
+                <span>seaparkactivities@gmail.com</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-0.5">📱</span>
@@ -74,13 +82,15 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-turquoise transition-colors"
                 >
-                  +62 812 3456 7890
+                  +62 812-4658-7135
                 </a>
               </li>
             </ul>
             <div className="flex gap-3 mt-6">
               <a
-                href="#"
+                href="https://www.instagram.com/seapark_activities/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white/60 hover:text-turquoise transition-all duration-300"
                 aria-label="Instagram"
               >

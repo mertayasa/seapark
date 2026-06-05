@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Get in touch with Sea Park Activities for snorkeling tour bookings, questions, or availability checks. WhatsApp, email, or visit us in Nusa Lembongan.",
 }
 
-const WHATSAPP_NUMBER = "6281234567890"
+const WHATSAPP_NUMBER = "6281246587135"
 
 export default function ContactPage() {
   return (
@@ -52,11 +52,18 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-1">Location</h3>
-                    <p className="text-white/50 text-sm leading-relaxed">
-                      Jungut Batu, Nusa Lembongan
+                    <a
+                      href="https://maps.app.goo.gl/RgV7jXPA68Munmgk7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/50 text-sm leading-relaxed hover:text-turquoise transition-colors block"
+                    >
+                      Br. anggrek dusun ceningan kawan,
                       <br />
-                      Klungkung, Bali, Indonesia 80771
-                    </p>
+                      Lembongan, Kec. Nusa Penida,
+                      <br />
+                      Kabupaten Klungkung, Bali 80771
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -71,7 +78,7 @@ export default function ContactPage() {
                       rel="noopener noreferrer"
                       className="text-turquoise text-sm hover:underline"
                     >
-                      +62 812 3456 7890
+                      +62 812-4658-7135
                     </a>
                     <p className="text-white/40 text-xs mt-1">
                       Fastest way to reach us!
@@ -85,10 +92,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-white font-semibold mb-1">Email</h3>
                     <a
-                      href="mailto:hello@seaparkactivities.com"
-                      className="text-turquoise text-sm hover:underline"
+                      href="mailto:seaparkactivities@gmail.com"
+                      className="text-white hover:text-turquoise transition-colors"
                     >
-                      hello@seaparkactivities.com
+                      seaparkactivities@gmail.com
                     </a>
                   </div>
                 </div>
@@ -129,14 +136,14 @@ export default function ContactPage() {
             <div>
               <div className="glass rounded-3xl overflow-hidden h-full min-h-[400px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15781.86!2d115.4375!3d-8.6825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24102c4cda42d%3A0xe29e20f1f3d7ee0!2sNusa%20Lembongan!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid"
+                  src="https://maps.google.com/maps?q=Br.%20anggrek%20dusun%20ceningan%20kawan,%20Lembongan,%20Kec.%20Nusa%20Penida,%20Kabupaten%20Klungkung,%20Bali%2080771&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: "400px" }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Sea Park Activities Location - Nusa Lembongan"
+                  title="Sea Park Activities Location"
                   id="google-map"
                 />
               </div>

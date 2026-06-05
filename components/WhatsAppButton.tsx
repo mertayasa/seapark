@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "6281234567890"
+const WHATSAPP_NUMBER = "6281246587135"
 
 interface WhatsAppButtonProps {
   message: string
