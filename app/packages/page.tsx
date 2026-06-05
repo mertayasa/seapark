@@ -227,10 +227,10 @@ export default function PackagesPage() {
                 </h3>
                 <div className="flex items-center gap-3 mb-6">
                   <span className="px-3 py-1 bg-white/5 rounded-full text-white/50 text-xs">
-                    ⏱ ~4 hours
+                    ⏱ ~2 hours
                   </span>
                   <span className="px-3 py-1 bg-white/5 rounded-full text-white/50 text-xs">
-                    👥 8–12 people
+                    👥 6–10 people
                   </span>
                   <span className="px-3 py-1 bg-white/5 rounded-full text-white/50 text-xs">
                     🏊 Easy–Medium
@@ -314,7 +314,7 @@ export default function PackagesPage() {
                 </h3>
                 <div className="flex items-center gap-3 mb-6 flex-wrap">
                   <span className="px-3 py-1 bg-white/5 rounded-full text-white/50 text-xs">
-                    ⏱ ~5 hours (flexible)
+                    ⏱ ~2.5 hours (flexible)
                   </span>
                   <span className="px-3 py-1 bg-white/5 rounded-full text-white/50 text-xs">
                     👥 1–6 people
